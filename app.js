@@ -6,26 +6,6 @@ let numTwo = "";
 const $operator = document.querySelector("#operator");
 const $result = document.querySelector("#result");
 const onClickNumber = (event) => {
-  if (numTwo) {
-    switch (operator) {
-      case "+":
-        $result.value = parseInt(numOne) + parseInt(numTwo);
-        break;
-      case "-":
-        $result.value = numOne - numTwo;
-        break;
-      case "*":
-        $result.value = numOne * numTwo;
-        break;
-      case "/":
-        $result.value = numOne / numTwo;
-        break;
-      default:
-        break;
-    }
-    numOne = $result.value;
-    numTwo = "";
-  }
   const number = event.target.textContent;
   if (!operator) {
     numOne += number;
